@@ -26,3 +26,12 @@ Bu döküman, projenin ikinci haftasında ray altı çakıl taşlarının (balas
 ## 5. Gelecek Çalışmalar
 * [ ] Alt tabanın kenarlık hizalamasının milimetrik olarak eşitlenmesi.
 * [ ] Kamera hareketinin curve (eğri) ve hız grafiklerinin (Graph Editor) düzenlenmesi.
+
+<img width="1920" height="1080" alt="deneme2" src="https://github.com/user-attachments/assets/22de102e-725e-4cb4-b9d6-c748e8ed3dcb" />
+
+<img width="1920" height="1080" alt="deneme4" src="https://github.com/user-attachments/assets/d174ebbd-c57d-48ae-b920-206f82133245" />
+
+<img width="1920" height="1080" alt="deneme6" src="https://github.com/user-attachments/assets/1f3b3e5a-c9d0-49f2-8bd9-e7f203de561d" />
+
+<img width="1917" height="712" alt="deneme8" src="https://github.com/user-attachments/assets/60d09a0b-296e-4451-bb1f-b5c324d295ab" />
+
