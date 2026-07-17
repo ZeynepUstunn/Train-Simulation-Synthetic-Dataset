@@ -35,3 +35,15 @@ Trenin gerçek dünya ivmesine ve banliyö hız standartlarına uyması adına, 
 ## 5. Gelecek Çalışmalar ve Sentetik Veri Çeşitliliği (Bonus)
 * [ ] Kamera keyframe rotalarının sarsıntısız akış için eğriler üzerinden yeniden çizilmesi.
 * [ ] Yapay zeka veri çeşitliliğini (data augmentation) artırmak adına ilerleyen aşamalarda; farklı hava durumları (yağmur, kar), farklı ışık kaynakları (gece/gündüz) ve ters yönden dönüş hatlarının simüle edilmesi.
+
+<img width="1236" height="692" alt="render" src="https://github.com/user-attachments/assets/8a6b991a-b67e-44f3-9dc0-f9146ca4daa5" />
+
+<img width="1920" height="1080" alt="render3" src="https://github.com/user-attachments/assets/30561bf5-d2ce-405d-afb3-6e5d93855c47" />
+
+<img width="1920" height="1080" alt="1" src="https://github.com/user-attachments/assets/7cefc2a6-eeba-42db-bbc6-a5a61c7525ec" />
+
+<img width="1265" height="827" alt="6" src="https://github.com/user-attachments/assets/32312e4f-2ce8-48ad-921d-3f3b445eb6a3" />
+
+<img width="1920" height="1080" alt="16" src="https://github.com/user-attachments/assets/d1766e5d-14f0-401c-b16f-3b27a1117872" />
+
+<img width="1920" height="1080" alt="22" src="https://github.com/user-attachments/assets/922c6bd8-b203-4adc-a0eb-467b0ac4aad2" />
