@@ -20,7 +20,6 @@ Sahnede `Sampling` (64), `Light Paths` (Diffuse/Glossy limitleri 3'e düşürül
 
 ## 3. Render Analizi ve Karşılaşılan Kısıtlamalar
 * **Kırılma Noktası Darboğazı:** Kare başı süre stabil olarak 40-50 saniye bandında giderken, kameranın tünel girişine yaklaştığı **178. kareden sonra** süre 1 dakikanın üzerine çıkmıştır. Tünel içi ışık ve gölge matrislerinin (Ray Tracing) hesaplama yükünü artırdığı tespit edilmiştir.
-* **Veri Kaybı (Overwrite):** Yanlışlıkla video üzerine yazma (*Overwrite*) hatası nedeniyle bir önceki animasyon çıktısı kaybedilmiş, bu durum risk yönetimi adına projenin `PNG Sequence` olarak alınması kararını kesinleştirmiştir.
 
 ## 4. Matematiksel Zaman Çizelgesi (Timeline) ve Hız Planı
 Trenin gerçek dünya ivmesine ve banliyö hız standartlarına uyması adına, kameranın toplam rotası için planlanan yeni hız senaryosu grafik editörü (Graph Editor) için şu şekilde hesaplanmıştır:
