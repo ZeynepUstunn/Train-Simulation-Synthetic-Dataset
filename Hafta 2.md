@@ -3,8 +3,7 @@
 Bu döküman, projenin ikinci haftasında ray altı çakıl taşlarının (balast) modellenmesi sırasında karşılaşılan yüksek bellek (RAM/VRAM) kısıtlamalarını çözmek adına uygulanan sistem, donanım ve render optimizasyonlarını içermektedir.
 
 ## 1. Çevre Tasarımı ve Sahne Mimarisi
-* **Sürücü Optimizasyonu:** Donanım performansını artırmak adına **NVIDIA Game Ready** sürücüleri güncellenmiş ve render sürelerinde optimizasyon sağlanmıştır.
-* **Ufuk Çizgisi ve Skybox:** Sahne arka planına **Skybox ve dağ modelleri** entegre edilmiştir. Rayların ufuk çizgisinde aniden kesilmesini önlemek ve derinlik algısını korumak adına sahne geometrisi yatay eksende genişletilmiştir.
+* **Ufuk Çizgisi ve Skybox:** Rayların ufuk çizgisinde aniden kesilmesini önlemek ve derinlik algısını korumak adına sahne geometrisi yatay eksende genişletilmiştir.
 * **Ray ve Tünel Düzenlemeleri:** Kısıtlı model kaynakları nedeniyle ahşap traversli ray modeli seçilmiş ve metalik parlama (specular) efektleri eklenmiştir. Çeşitli kamera dönüşleri eklenerek rota güncellenmiş ve sol taraftaki ek hattın sonuna derinlik hissi vermesi için karanlık bir tünel silueti entegre edilmiştir.
 
 ## 2. Yüksek Yoğunluklu Nesne Yönetimi (Çakıl Taşları & Geometry Nodes)
