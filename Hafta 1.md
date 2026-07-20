@@ -13,7 +13,6 @@ Bu döküman, projenin ilk haftasında sentetik veri setinin oluşturulacağı 3
 ## 3. Görsel Gerçekçilik ve Yapay Zeka (AI) Veri Analizi
 * **Çevre Aydınlatması:** Raylar üzerinde metalik yansımalar (`ray parlaması`), balast taşları ve genel ortam aydınlatması için **`Skybox / HDRI`** kurulumu tamamlanmıştır.
 * **Veri Kalitesi Ölçümü:** Kaplamalardaki (texture) ot, çalı ve taş detaylarının yapay zeka modellerinde gürültü (noise) yaratıp yaratmayacağı analize alınmıştır. **Görsel gerçekçilik ile ham veri dengesi** optimize edilmektedir.
-* 
 
 ## 4. Kamera, Aydınlatma ve Stratejik Hedefler
 * **Kamera ve Kadraj:** 10 saniyelik ilk simülasyon testi için alt düzlem (`Plane`) ölçeklendirilmiş ve kameranın başlangıç rotası çizilmiştir.
