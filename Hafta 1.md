@@ -4,7 +4,7 @@ Bu döküman, projenin ilk haftasında sentetik veri setinin oluşturulacağı 3
 
 ## 1. Geometrik Altyapı ve Model Entegrasyonu
 * **Format Standartlaştırması:** `.blend` formatındaki ham kaynakların aktarımında yaşanan hiyerarşi ve mesh sorunları nedeniyle, asset boru hattı **`.gltf` / `.fbx`** standartlarına çekilmiştir.
-* **Varlık (Asset) Entegrasyonu:** Sahne dinamiğine uygun hazır tren rayları (`Train Rail`) ve katener direkleri yerleştirilmiş; ray sonuna derinlik algısı yaratması amacıyla tünel giriş yapısı eklenmiştir.
+* **Varlık (Asset) Entegrasyonu:** Sahne dinamiğine uygun hazır dağ, ağaç ve tren rayları (`Train Rail`) eklendi.
 
 ## 2. Bellek ve Donanım Optimizasyonu (Performans)
 * **VRAM ve Nesne Klonlama:** Çevresel varlıkların (ağaç, taş vb.) `Ctrl + C` / `Ctrl + V` ile kopyalanmasının poligon sayısını şişirdiği ve donanımı kilitlediği saptanmıştır. Tüm varlıklar silinerek **`Alt + D` (Linked Duplicate / Instancing)** yöntemiyle yeniden klonlanmış ve ekran kartı belleği (VRAM) optimize edilmiştir.
