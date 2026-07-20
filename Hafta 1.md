@@ -11,7 +11,7 @@ Bu döküman, projenin ilk haftasında sentetik veri setinin oluşturulacağı 3
 * **Geçici Dosya (Cache) Yönetimi:** C diskinin dolmasından kaynaklı Cycles/Eevee render motoru hatalarını çözmek adına Blender **`Temporary Path` (Geçici Dosya Yolu)** dizini D diskine taşınmış ve render süreleri normale döndürülmüştür.
 
 ## 3. Görsel Gerçekçilik ve Yapay Zeka (AI) Veri Analizi
-* **Çevre Aydınlatması:** Raylar üzerinde metalik yansımalar (`ray parlaması`), balast taşları ve genel ortam aydınlatması için **`Skybox / HDRI`** kurulumu tamamlanmıştır.
+* **Çevre Aydınlatması:** Raylar üzerinde metalik yansımalar (`ray parlaması`) için texture düzenlemeleri yapılıp sahneye gerçekçi aydınlatma sağlayan güneş kaynağı eklenmiştir.
 * **Veri Kalitesi Ölçümü:** Kaplamalardaki (texture) ot, çalı ve taş detaylarının yapay zeka modellerinde gürültü (noise) yaratıp yaratmayacağı analize alınmıştır. **Görsel gerçekçilik ile ham veri dengesi** optimize edilmektedir.
 
 ## 4. Kamera, Aydınlatma ve Stratejik Hedefler
