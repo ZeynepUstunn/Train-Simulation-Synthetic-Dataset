@@ -6,6 +6,20 @@
 <img width="1920" height="1080" alt="6" src="https://github.com/user-attachments/assets/9cd98ad3-2109-4dc4-a644-24aa33870535" />
 <img width="1920" height="1080" alt="7" src="https://github.com/user-attachments/assets/86884fca-9068-4f88-a5c4-0491661ef6cc" />
 <img width="1920" height="1080" alt="8" src="https://github.com/user-attachments/assets/ccf29e15-b7fd-4cf1-982e-1a236a5b24ab" />
+# 🚨 Yan Hat ve Aktif Hat Eş Zamanlı Anomali Senaryosu (Multi-Track Edge Case)
+🎯 Durum Özeti
+Kamera açısına aynı anda hem trenin ilerlediği aktif hat (kendi rayımız) hem de yan hat (komşu ray) üzerindeki yabancı nesnelerin girmesi durumu kurgulanmıştır.
+
+⚙️ Yapay Zeka Mantığı ve Önceliklendirme (Threat Prioritization)
+Görsel Algılama (YOLO): Model ekrandaki her iki engeli de tespit eder ve Bounding Box ile etiketler.
+
+Rota Ayrımı (ROI / Rail Segmentation): Yapay zeka, aktif tren hattı ile komşu hattı birbirinden ayırır.
+Karar Mekanizması:
+🛑 Aktif Raydaki Engel: Doğrudan çarpma rotasında olduğu için Acil Fren (E-Brake) uyarısı tetiklenir.
+⚠️ Yan Raydaki Engel: Trenin güvenliğini doğrudan tehdit etmediği için Bilgi/Uyarı (Traffic Warning) olarak merkeze raporlanır.
+
+💡 Veri Setine Katkısı
+Bu sentetik veri senaryosu, modele sadece engel tanımayı değil; "Ekrandaki engellerden hangisi benim rotam üzerinde?" sorusunu yanıtlayarak tehdit önceliklendirme kabiliyeti kazandırır.
 <img width="1920" height="1080" alt="9" src="https://github.com/user-attachments/assets/2b2d827b-bb78-4f0a-b624-a9f79bdf50b3" />
 <img width="1920" height="1080" alt="10" src="https://github.com/user-attachments/assets/e9faa2ad-feac-4c2b-80da-427d77b8c706" />
 <img width="1920" height="1080" alt="10" src="https://github.com/user-attachments/assets/a6b7626e-40e6-46f4-820c-5768ffa1b0b4" />
