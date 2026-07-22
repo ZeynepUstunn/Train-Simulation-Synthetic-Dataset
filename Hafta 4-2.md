@@ -17,11 +17,15 @@ Kamera açısına aynı anda hem trenin ilerlediği aktif hat (kendi rayımız) 
 Görsel Algılama (YOLO): Model ekrandaki her iki engeli de tespit eder ve Bounding Box ile etiketler.
 
 Rota Ayrımı (ROI / Rail Segmentation): Yapay zeka, aktif tren hattı ile komşu hattı birbirinden ayırır.
+
 Karar Mekanizması:
+
 🛑 Aktif Raydaki Engel: Doğrudan çarpma rotasında olduğu için Acil Fren (E-Brake) uyarısı tetiklenir.
+
 ⚠️ Yan Raydaki Engel: Trenin güvenliğini doğrudan tehdit etmediği için Bilgi/Uyarı (Traffic Warning) olarak merkeze raporlanır.
 
 💡 Veri Setine Katkısı
+
 Bu sentetik veri senaryosu, modele sadece engel tanımayı değil; "Ekrandaki engellerden hangisi benim rotam üzerinde?" sorusunu yanıtlayarak tehdit önceliklendirme kabiliyeti kazandırır.
 
 <img width="1920" height="1080" alt="9" src="https://github.com/user-attachments/assets/2b2d827b-bb78-4f0a-b624-a9f79bdf50b3" />
