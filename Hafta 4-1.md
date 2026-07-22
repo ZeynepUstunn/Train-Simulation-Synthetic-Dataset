@@ -4,7 +4,7 @@
 
 Bu hafta kapsamında, önceki render çıktılarında tespit edilen fiziksel ve geometrik tutarsızlıkların giderilmesi, sahne alanının büyütülmesi ve yapay zeka modelinin eğitim kalitesini artıracak anomali senaryolarının (Edge Case) sahneye entegrasyonu üzerine çalışılmıştır.
 
-### 1. ⚡ Elektrifikasyon ve Katener Sistemleri (Direk ve Tel Düzenlemeleri)
+### 1. ⚡ Direk ve Tel Düzenlemeleri
 * **Konumlandırma Optimizasyonu:** Rayların ortasında yer alan ve fiziksel çakışmaya sebep olan katener direkleri kaldırıldı. Direkler, gerçek demiryolu standartlarına uygun olarak hattın **sağ ve sol kenarlarına** hizalandı.
 * **Geometri Değişimi:** Tipik ahşap/üçgen yapılı destek direkleri sahneye entegre edilerek gerçekçilik artırıldı.
 * **Tünel ve Tel Entegrasyonu:** Tünel üstünü delip geçen hatalı tel rotaları düzeltilerek; katener tellerinin tünel içi izolatör bağlantıları ve hat boyunca gerilim hatları fiziksel kurallara uygun hale getirildi.
