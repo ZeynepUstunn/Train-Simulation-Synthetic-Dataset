@@ -4,22 +4,20 @@
 
 Bu hafta kapsamında, önceki render çıktılarında tespit edilen fiziksel ve geometrik tutarsızlıkların giderilmesi, sahne alanının büyütülmesi ve yapay zeka modelinin eğitim kalitesini artıracak anomali senaryolarının (Edge Case) sahneye entegrasyonu üzerine çalışılmıştır.
 
-### 1. ⚡ Direk ve Tel Düzenlemeleri
+### 1.⚡ Direk ve Tel Düzenlemeleri
 * **Konumlandırma Optimizasyonu:** Rayların ortasında yer alan ve fiziksel çakışmaya sebep olan katener direkleri kaldırıldı. Direkler, gerçek demiryolu standartlarına uygun olarak hattın **sağ ve sol kenarlarına** hizalandı.
 * **Geometri Değişimi:** Tipik ahşap/üçgen yapılı destek direkleri sahneye entegre edilerek gerçekçilik artırıldı.
-* **Tünel ve Tel Entegrasyonu:** Tünel üstünü delip geçen hatalı tel rotaları düzeltilerek; katener tellerinin tünel içi izolatör bağlantıları ve hat boyunca gerilim hatları fiziksel kurallara uygun hale getirildi.
 
 ### 2. 🗺️ Sahne Genişletme ve Çevre Tasarımı (Köy & Balast)
 * **Sahne Ölçeği (Terrain Expansion):** Yapay zeka modelinin uzun menzilli hat takibi yapabilmesi adına mevcut hat mesafesi genişletildi, toplam render süresi ve kapsama alanı artırıldı.
-* **Çakıl Taşları (Balast Düzenlemesi):** Ray altı taban kalınlığı ve kenar şev genişlikleri belirlenen oranlarda ($25/34$ kademeli dağılımı) Geometry Nodes / instancing ile yeniden düzenlendi.
+* **Çakıl Taşları (Balast Düzenlemesi):** Ray altı taban kalınlığı ve kenar genişlikleri belirlenen oranlarda ($25/34$ kademeli dağılımı) Geometry Nodes / instancing ile yeniden düzenlendi.
 * **Çevre ve Köy Bölgesi Revizyonu:** Sahnenin son kısmında yer alan istasyon/köy yerleşkesindeki model ölçeklendirmeleri (Scale) $1:1$ gerçek boyutlara getirildi; ufuk çizgisindeki (horizon gap) boşluklar arazi elemanlarıyla kapatıldı.
 
 ### 3. 🎥 Kamera Hareketi ve Dinamik Hız Ayarı (FPS & Frame Scaling)
 * **Hız Algısı Düzeltmesi:** İlk prototipte görsel olarak yavaş algılanan kamera hareketi yeniden kalibre edildi.
-* **Frame Aralığı Kısaltması:** Kameranın viraj ve düzlüklerdeki ivmelenmesi (Inertia & Spline Interpolation) güncellenerek frame aralığı kısaltıldı. Böylece daha dinamik ve gerçekçi bir tren sürüş açı/hız profili elde edildi.
 
 ### 4. 🚨 Yapay Zeka Anomali Senaryoları (Obstacle & Anomaly Detection)
-* **Ray Üstünde Yabancı Nesne (Obstacle Detection):** Yapay zeka modelinin acil durum frenleme ve engel tanıma kabiliyetini ölçmek amacıyla ray üzerine nesne/engel senaryoları entegre edildi.
+* **Ray Üstünde Yabancı Nesne (Obstacle Detection):** Yapay zeka modelinin acil durum frenleme ve engel tanıma kabiliyetini ölçmek amacıyla ray üzerine nesne/engel senaryoları entegre edilecek.
 
 <img width="1692" height="902" alt="image" src="https://github.com/user-attachments/assets/d05f393c-4f58-46d6-a956-ac5ab93a5eaa" />
 <img width="1687" height="897" alt="image" src="https://github.com/user-attachments/assets/c27d6ceb-2b54-4be7-9490-ad6fdbf49a43" />
