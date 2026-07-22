@@ -22,3 +22,6 @@ Sahnede artan obje ve geometri yoğunluğuna bağlı olarak yükselen render sü
 - [ ] **2. Parça Render Alımı:** Frame aralığını `501 - 1000` olarak ayarla ve `render_part2` klasörüne çıktı al. *(500. kareyi tekrarlama!)*
 - [ ] **3. Parça Render Alımı:** Frame aralığını `1001 - 1500` olarak ayarla ve `render_part3` klasörüne çıktı al.
 - [ ] **Işık & Çevre Kontrolü:** Parçalar arasında renk/ışık tonu farkı oluşmaması için HDRI, gün ışığı ve kamera hızı ayarlarına müdahale etme.
+
+# Trenin tahtanın üstünden geçip gitmesi fiziksel bir kaza değil, nesne tespiti modelinin kameraya sıfır mesafeye kadar olan yaklaşma verisini toplama sürecidir.
+"Ray üstü anomali senaryolarında (Obstacle Detection), kameranın yabancı nesneye yaklaşma ve temas anına kadarki tüm açısal verilerini (Continuous Spatial Data) toplamak amacıyla sürekli hat hareketi sürdürülmüştür."
