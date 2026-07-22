@@ -10,3 +10,15 @@
 <img width="1920" height="1080" alt="10" src="https://github.com/user-attachments/assets/e9faa2ad-feac-4c2b-80da-427d77b8c706" />
 <img width="1920" height="1080" alt="10" src="https://github.com/user-attachments/assets/a6b7626e-40e6-46f4-820c-5768ffa1b0b4" />
 <img width="1920" height="1080" alt="11" src="https://github.com/user-attachments/assets/e5a9bda0-cbd5-445c-8109-d8ec2c1e3b8e" />
+
+# 📋 Render Bölme ve Modüler İşleme Planı (Hafta Sonu Birleştirme)
+
+## 🎯 Amaç
+Sahnede artan obje ve geometri yoğunluğuna bağlı olarak yükselen render süresini yönetmek, VRAM/RAM kaynaklı çökme (crash) risklerini sıfırlamak ve donanımı korumak amacıyla **1500 karelik (frame)** simülasyonu 3 modüler parçada render almak.
+
+## 🟩 Yapılacaklar (Checklist)
+
+- [ ] **1. Parça Render Alımı:** Frame aralığını `1 - 500` olarak ayarla ve `render_part1` olarak çıktı al.
+- [ ] **2. Parça Render Alımı:** Frame aralığını `501 - 1000` olarak ayarla ve `render_part2` klasörüne çıktı al. *(500. kareyi tekrarlama!)*
+- [ ] **3. Parça Render Alımı:** Frame aralığını `1001 - 1500` olarak ayarla ve `render_part3` klasörüne çıktı al.
+- [ ] **Işık & Çevre Kontrolü:** Parçalar arasında renk/ışık tonu farkı oluşmaması için HDRI, gün ışığı ve kamera hızı ayarlarına müdahale etme.
