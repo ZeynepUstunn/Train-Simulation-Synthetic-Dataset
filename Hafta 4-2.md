@@ -7,6 +7,7 @@
 <img width="1920" height="1080" alt="7" src="https://github.com/user-attachments/assets/86884fca-9068-4f88-a5c4-0491661ef6cc" />
 <img width="1920" height="1080" alt="8" src="https://github.com/user-attachments/assets/ccf29e15-b7fd-4cf1-982e-1a236a5b24ab" />
 # 🚨 Yan Hat ve Aktif Hat Eş Zamanlı Anomali Senaryosu (Multi-Track Edge Case)
+
 🎯 Durum Özeti
 Kamera açısına aynı anda hem trenin ilerlediği aktif hat (kendi rayımız) hem de yan hat (komşu ray) üzerindeki yabancı nesnelerin girmesi durumu kurgulanmıştır.
 
