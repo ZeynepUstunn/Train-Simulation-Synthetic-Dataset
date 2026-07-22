@@ -47,3 +47,30 @@ Sahnede artan obje ve geometri yoğunluğuna bağlı olarak yükselen render sü
 
 # Trenin tahtanın üstünden geçip gitmesi fiziksel bir kaza değil, nesne tespiti modelinin kameraya sıfır mesafeye kadar olan yaklaşma verisini toplama sürecidir.
 "Ray üstü anomali senaryolarında (Obstacle Detection), kameranın yabancı nesneye yaklaşma ve temas anına kadarki tüm açısal verilerini (Continuous Spatial Data) toplamak amacıyla sürekli hat hareketi sürdürülmüştür."
+
+# 🚀 Yapay Zeka Veri Seti İçin Anomali ve Edge Case Senaryoları 
+
+## 1. 🪨 Nesne Türü ve Boyut Çeşitlendiricileri (Object Diversity)
+Modelin sadece tahta blokları değil, farklı geometri ve materyalleri tanıması için:
+* **Metal / Yansıtıcı Cisimler:** Ray üstünde birikmiş hurda, metal parçası veya araç aksamı (Işığı yansıttığı için parlama/glare testi yapar).
+* **Doğal Engeller:** Ray üzerine düşmüş kaya/taş yığını veya devrilmiş ağaç dalı.
+* **Organik / Hareketli Nesneler (Canlı Tespiti):** Ray üzerinde duran insan, hayvan (sığır/köpek) veya hat bakım işçisi maketleri.
+* **Küçük / Alçak Engeller:** Ray seviyesini çok az aşan küçük taş veya alet çantası (Modelin düşük piksel boyutlu nesne algılama hassasiyetini ölçer).
+
+## 2. 📍 Konumsel ve Geometrik Senaryolar (Spatial & Geometry Edge Cases)
+* **Kısmi Engel (Partially Blocking):** Engelin tamamı değil, sadece bir kısmı (örn: sadece sağ/sol raya taşan tahta) aktif hatta duruyor.
+* **Viraj İçi Anomali (Curve Detection):** Kameranın görüş açısının kısıtlandığı keskin virajların tam çıkışına konulan engeller (Modelin açısal algılama mesafesini test eder).
+* **Tünel Giriş/Çıkış Anomalisi (High Contrast / Blind Spot):** Işık seviyesinin aniden değiştiği tünel ağzına yerleştirilen engeller.
+* **Makas Geçişleri (Switching Tracks):** Trenin ray değiştirdiği (makas) noktalarda her iki hatta dağılmış çoklu engeller.
+
+## 3. 🌧️ Çevre, Hava ve Işık Koşulları (Environmental Augmentation)
+Blender içinde sadece nesneleri değil, sahne ortamını değiştirerek elde edilecek senaryolar:
+* **Gece / Düşük Işık (Night Vision):** Trenin kendi farının (Spotlight) aydınlattığı alanda engel tespiti.
+* **Sis / Puslu Hava (Volumetric Fog):** Görüş mesafesinin düştüğü durumlarda derinlik (depth) ve engel tanıma testi.
+* **Gölge Yanılsamaları (Hard Shadows):** Ağaçların veya katener direklerinin ray üzerine düşürdüğü dik gölgeler (Modelin gölgeyi engel sanmasını / False Positive engeller).
+* **Kamera Merceği Paraziti:** Ekran kartı renderında hafif gren (noise), motion blur veya mercek lekesi ekleyerek gerçek kamera kusurlarını simüle etmek.
+
+## 4. 🛤️ Altyapısal Anomaliler (Structural Defects)
+Yabancı nesne dışında ray hattının kendisindeki bozulmalar:
+* **Eksik / Kırık Ray (Rail Break):** Rayın bir kısmının kopuk veya kırık olması.
+* **Hizası Bozulmuş Travers:** Ahşap/beton traverslerin yerinden oynaması veya eksik olması.
