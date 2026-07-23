@@ -31,6 +31,7 @@ Saha çalışması ve durak bakım süreçlerini simüle eden nesneler:
 * **Kısmi Engel (Partial Obstacle):** Objeyi doğrudan rayın tam ortasına koymak yerine **bir kısmını raya, bir kısmını peron veya toprağa değecek şekilde** yerleştir.
 * **Katkısı:** Model sadece hattı tam bloklayan nesneleri değil, **aktif rotaya taşan potansiyel tehlikeleri** de (Sınır/Tehdit Algılama) tespit etmeyi öğrenir.
 
+<img width="1920" height="1080" alt="b6" src="https://github.com/user-attachments/assets/1f2c86cb-fc33-4286-bfb8-af299f84e6d8" />
 <img width="1920" height="1080" alt="b1" src="https://github.com/user-attachments/assets/15bd0c72-25f5-40ac-b9fe-56d5905e406a" />
 <img width="1920" height="1080" alt="b2" src="https://github.com/user-attachments/assets/01c4008f-7c2b-47bb-97e7-02bc96b00a20" />
 <img width="1920" height="1080" alt="b3" src="https://github.com/user-attachments/assets/a7513460-b361-4bf1-b6af-a80c2206cbb6" />
