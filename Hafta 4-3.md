@@ -1,4 +1,4 @@
-# 🚉 Durak Yakını Anomali ve Sentetik Veri Senaryoları
+# 🚉 Anomali ve Sentetik Veri Senaryoları
 
 Durak yakınlarında insan hareketi ve yerleşim yoğun olduğu için bu bölgede kurgulanacak anomali senaryoları hem sahne gerçekçiliğini artırır hem de yapay zeka (YOLO) modelinin farklı geometri, materyal ve boyutlardaki engelleri tanımasını sağlar.
 
