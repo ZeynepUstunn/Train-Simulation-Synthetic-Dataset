@@ -38,3 +38,4 @@ Saha çalışması ve durak bakım süreçlerini simüle eden nesneler:
 <img width="1920" height="1080" alt="a" src="https://github.com/user-attachments/assets/3cd4f715-c9c5-4077-8d02-233df397a741" />
 <img width="1920" height="1080" alt="b4" src="https://github.com/user-attachments/assets/3462707b-6415-45de-b4e3-449dfc71be3d" />
 <img width="1920" height="1080" alt="b5" src="https://github.com/user-attachments/assets/cb1fc70e-99e8-4567-bb19-4113640e7ecc" />
+<img width="1920" height="1080" alt="b6" src="https://github.com/user-attachments/assets/3a835acf-77a7-4bf4-9f92-010dd2a2daef" />
