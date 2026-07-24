@@ -1,0 +1,8 @@
+# 🛠️ BlenderProc "Not a Blend File" Sürüm Uyumsuzluğu ve Çözümü
+
+## 📌 Problem Özeti
+`blenderproc run run_pipeline.py` komutu çalıştırıldığında, `.blend` dosya yolu doğru olmasına rağmen BlenderProc arka planda sürekli aşağıdaki hatayı fırlatıyordu:
+
+```text
+Error: Loading "Rail_Road8.blend" failed: Failed to read blend file, not a blend file
+RuntimeError: Error: Loading "..." failed: Failed to read blend file, not a blend file
