@@ -30,6 +30,11 @@ Bu repo, Blender Python API (`bpy`) ve YOLO nesne tespiti formatı kullanılarak
 ### 5. `exp4.py` (Standartlaştırma & Final Sürüm)
 * **Açıklama:** Sınıf adlandırmalarında standartlaşmaya gidilerek `Koli` terimi **`Box`** olarak güncellenmiştir. Parçalı zaman aralıkları ve optimize edilmiş nesne isimleriyle güncel kararlı üretim kodudur.
 
+### 6. `single_anomaly_test.py` (Tekli Anomali & Kırpma Filtreli Test Sürümü)
+* **Açıklama:** Belirli bir kare aralığında (örn. başlangıç veya özel test aralıkları) tek bir anomali nesnesini izole ederek test etmek için kullanılan sürümüdür.
+* **Öne Çıkan Özellikler:**
+  * Nesne kameranın dışına çıkmaya başladığında veya sınır kutusu çok küçüldüğünde hatalı etiket oluşmasını önleyen `width > 0.01` filtreleme mantığına sahiptir.
+  * Sahnedeki hedef nesnenin her karede kendi ekseni etrafında (`rotation_z`) rastgele dönmesini ve hafif konum varyasyonları kazanmasını sağlar.
 ---
 
 ## 🛠️ Kullanım (Nasıl Çalıştırılır?)
