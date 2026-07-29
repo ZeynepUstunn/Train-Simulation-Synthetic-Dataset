@@ -2,3 +2,39 @@
 
 - **Açılımı:** `bpy`, **"Blender Python"** (Blender Python API) ifadesinin kısaltmasıdır.
 - **Tanımı:** Blender yazılımının dahili Python modülüdür. Sahneler, 3D nesneler, kameralar, ışıklar, materyaller ve render motoru gibi Blender içindeki her türlü bileşeni harici bir arayüze gerek kalmadan kod aracılığıyla tamamen kontrol etmeyi ve otomatikleştirmeyi sağlar.
+
+# 📦 Demiryolu Anomali Tespiti - Sentetik Veri Üretim Pipeline'ı
+
+Bu repo, Blender Python API (`bpy`) ve YOLO nesne tespiti formatı kullanılarak demiryolu sahneleri için otomatik sentetik veri (görsel ve `.txt` etiketleri) üreten Python betiklerini barındırmaktadır.
+
+---
+
+## 🚀 Script Açıklamaları ve Sürüm Geçmişi
+
+### 1. `single_box_detect.py` (Tekli Nesne & Kapsamlı Optimizasyon Sürümü)
+* **Açıklama:** İçi içe geçmiş gruplu/klasörlü karmaşık 3D modelleri (`box` vb.) Outliner yapısında kaybolmadan bulabilmek için geliştirilmiş **özyürümeli (recursive) `find_real_mesh`** algoritmasını içerir. 
+* **Öne Çıkan Özellikler:**
+  * Cycles motoru ve GPU hızlandırma desteği ile yüksek kaliteli render.
+  * `get_yolo_bbox` fonksiyonu ile nesnenin kamera açısındaki 3D sınır kutusunu (bounding box) hatasız bir şekilde 2D YOLO formatına (`class_id x_center y_center width height`) dönüştürür.
+  * Aydınlatma çeşitliliği (Random Sun) ile modelin farklı ışık koşullarını öğrenmesini sağlar.
+
+### 2. `exp1.py` (Temel Altyapı & İlk Sürüm)
+* **Açıklama:** Projenin temel prototipidir. `Koli`, `Rock` ve `Wood` sınıfları tanımlanmış; skybox dönüşleri ve temel sahne animasyon döngüsü bu sürümde kurulmuştur.
+
+### 3. `exp2.py` (Çoklu Parça & Sınıf Gruplama Desteği)
+* **Açıklama:** Blender'da çakışma yaratmamak adına ikinci ahşap nesnesine `Wood_2` adı verilmiş ve kod tarafında ana sınıf ID'sine (`2`) bağlanarak çoklu parça desteği genişletilmiştir.
+
+### 4. `exp3.py` (Hata Düzeltme & Odaklanmış Render)
+* **Açıklama:** Yanlış nesne adından dolayı boş kalan koli (box) etiket aralığını düzeltmek amacıyla sadece ilgili kare aralığını (`620-810`) hedefleyen özel düzeltme betiğidir.
+
+### 5. `exp4.py` (Standartlaştırma & Final Sürüm)
+* **Açıklama:** Sınıf adlandırmalarında standartlaşmaya gidilerek `Koli` terimi **`Box`** olarak güncellenmiştir. Parçalı zaman aralıkları ve optimize edilmiş nesne isimleriyle güncel kararlı üretim kodudur.
+
+---
+
+## 🛠️ Kullanım (Nasıl Çalıştırılır?)
+
+PowerShell üzerinden Blender'ı arayüzsüz (background mode) çağırarak ilgili Python betiğini şu komutla çalıştırabilirsiniz:
+
+```powershell
+& "D:\Blender\blender-5.1.2-windows-x64\blender-5.1.2-windows-x64\blender.exe" -b "D:\opencv\Rail_Road8.blend" -P "D:\opencv\single_box_detect.py"
