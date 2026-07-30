@@ -42,6 +42,13 @@ Bu repo, Blender Python API (`bpy`) ve YOLO nesne tespiti formatı kullanılarak
   * Toplam etiket dosyası ile içinde nesne bulunmayan (boş) arka plan karelerinin sayısını tespit eder.
   * Her bir sınıf ID'sini (Box, Rock, Wood, Animal) isimleriyle eşleştirerek kaçar adet örnek üretildiğini terminale yazar.
   * Model eğitimi öncesi veri dengesizliğini kontrol etmek için hızlı ve pratik bir özet sunar.
+
+### 8. `kontrol.py` (Etiket Doğrulama ve Hata Ayıklama Aracı)
+* **Açıklama:** Üretilen YOLO etiket klasörünü (`labels/train`) tarayarak içinde birden fazla satır (birden fazla etiket) barındıran hatalı `.txt` dosyalarını tespit eden ve hangi nesnelerin karıştığını raporlayan yardımcı Python betiğidir.
+* **Öne Çıkan Özellikler:**
+  * `labels/train` dizinindeki tüm metin dosyalarını otomatik olarak tarar.
+  * Tek bir dosyada birden fazla etiket tespit ettiğinde, ilgili dosya adını ve içeriğinde geçen sınıfları (`Box`, `Rock`, `Wood`, `Animal`) detaylıca listeler.
+  * Çoklu nesne çakışmalarını veya yanlış filtreleme sonucu oluşan hatalı veri setlerini hızlıca yakalayarak temizleme operasyonlarına rehberlik eder.
 ---
 
 ## 🛠️ Kullanım (Nasıl Çalıştırılır?)
