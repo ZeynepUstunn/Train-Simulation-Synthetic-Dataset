@@ -49,6 +49,9 @@ Bu repo, Blender Python API (`bpy`) ve YOLO nesne tespiti formatı kullanılarak
   * `labels/train` dizinindeki tüm metin dosyalarını otomatik olarak tarar.
   * Tek bir dosyada birden fazla etiket tespit ettiğinde, ilgili dosya adını ve içeriğinde geçen sınıfları (`Box`, `Rock`, `Wood`, `Animal`) detaylıca listeler.
   * Çoklu nesne çakışmalarını veya yanlış filtreleme sonucu oluşan hatalı veri setlerini hızlıca yakalayarak temizleme operasyonlarına rehberlik eder.
+
+### kontrol_2.py (Dosya Eşleştirme ve Fazlalık Tespit Aracı)
+* **Açıklama:** Resim ve etiket klasörlerini (images/train ve labels/train) tarayarak karşılığı olmayan, fazladan oluşturulmuş hatalı .txt etiket dosyalarını tespit eden ve veri seti tutarlılığını sağlayan yardımcı Python betiğidir.
 ---
 
 ## 🛠️ Kullanım (Nasıl Çalıştırılır?)
