@@ -35,6 +35,13 @@ Bu repo, Blender Python API (`bpy`) ve YOLO nesne tespiti formatı kullanılarak
 * **Öne Çıkan Özellikler:**
   * Nesne kameranın dışına çıkmaya başladığında veya sınır kutusu çok küçüldüğünde hatalı etiket oluşmasını önleyen `width > 0.01` filtreleme mantığına sahiptir.
   * Sahnedeki hedef nesnenin her karede kendi ekseni etrafında (`rotation_z`) rastgele dönmesini ve hafif konum varyasyonları kazanmasını sağlar.
+
+### 7. `veri_dagilimi.py` (Dataset Analiz ve Dağılım Raporu)
+* **Açıklama:** Üretilen YOLO etiket klasörünü (`labels/train`) tarayarak veri setindeki sınıfların dengesini ve toplam dosya sayısını raporlayan yardımcı Python betiğidir.
+* **Öne Çıkan Özellikler:**
+  * Toplam etiket dosyası ile içinde nesne bulunmayan (boş) arka plan karelerinin sayısını tespit eder.
+  * Her bir sınıf ID'sini (Box, Rock, Wood, Animal) isimleriyle eşleştirerek kaçar adet örnek üretildiğini terminale yazar.
+  * Model eğitimi öncesi veri dengesizliğini kontrol etmek için hızlı ve pratik bir özet sunar.
 ---
 
 ## 🛠️ Kullanım (Nasıl Çalıştırılır?)
