@@ -7,12 +7,12 @@ image_dir = os.path.join(dataset_dir, "images")
 label_dir = os.path.join(dataset_dir, "labels")
 output_video_path = r"D:/opencv_video/anomaly_output_video_deneme2.mp4"
 
-# Sınıf ID'lerinin isim ve uyarı metinleri karşılığı
+# --- DOĞRU SINIF ID VE İSİM EŞLEŞMELERİ (Blender Scriptin ile Birebir) ---
 class_names = {
-    0: {"name": "Rock", "alert": "DIKKAT: KAYA TESPIT EDILDI!", "color": (0, 0, 255)},       # Kırmızı
-    1: {"name": "Wood", "alert": "DIKKAT: ODUN / TAHTA TESPIT EDILDI!", "color": (0, 165, 255)}, # Turuncu
-    2: {"name": "Box", "alert": "DIKKAT: KUTUTESPIT EDILDI!", "color": (255, 255, 0)},          # Camgöbeği/Sarı
-    3: {"name": "Animal", "alert": "DIKKAT: HAYVAN / CANLI TESPIT EDILDI!", "color": (0, 255, 0)}     # Yeşil
+    0: {"name": "Box",    "alert": "DIKKAT: KUTU TESPIT EDILDI!",        "color": (255, 255, 0)},   # Sarı / Camgöbeği
+    1: {"name": "Rock",   "alert": "DIKKAT: KAYA TESPIT EDILDI!",        "color": (0, 0, 255)},     # Kırmızı
+    2: {"name": "Wood",   "alert": "DIKKAT: ODUN / TAHTA TESPIT EDILDI!", "color": (0, 165, 255)},   # Turuncu
+    3: {"name": "Animal", "alert": "DIKKAT: HAYVAN / CANLI TESPIT EDILDI!", "color": (0, 255, 0)}   # Yeşil
 }
 
 start_frame = 1
@@ -33,7 +33,10 @@ height, width, _ = sample_img.shape
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
 video_writer = cv2.VideoWriter(output_video_path, fourcc, fps, (width, height))
 
-print("--- OpenCV ile Uyarı Mesajlı Video Üretimi Başladı ---")
+print("--- OpenCV ile Uyarı Mesajlı ve Sayaçlı Video Üretimi Başladı ---")
+
+# Etiket okunan kare sayısını takip etmek için sayaç
+labeled_frame_count = 0
 
 for f in range(start_frame, end_frame + 1):
     frame_name = f"{f:04d}"
@@ -48,6 +51,8 @@ for f in range(start_frame, end_frame + 1):
     
     # Eğer bu kareye ait bir etiket (.txt) dosyası varsa oku
     if os.path.exists(txt_path):
+        labeled_frame_count += 1  # Etiket okunan kare sayısını 1 artır
+        
         with open(txt_path, "r") as f_txt:
             lines = f_txt.readlines()
             
@@ -70,7 +75,7 @@ for f in range(start_frame, end_frame + 1):
             xmax = int(x_center + box_w / 2)
             ymax = int(y_center + box_h / 2)
             
-            # Obje türüne ait renk bilgisi
+            # Doğru sınıf sözlüğünden veriyi al
             cfg = class_names.get(class_id, {"name": "Unknown", "alert": "ANOMALI", "color": (255, 255, 255)})
             color = cfg["color"]
             
@@ -81,19 +86,19 @@ for f in range(start_frame, end_frame + 1):
             cv2.putText(frame, cfg["name"], (xmin, max(35, ymin - 10)), 
                         cv2.FONT_HERSHEY_SIMPLEX, 0.7, color, 2, cv2.LINE_AA)
             
-            active_classes_in_frame.append(cfg)
+            # Çakışmalar dahil o karedeki tüm aktif sınıfları listeye ekle
+            if cfg not in active_classes_in_frame:
+                active_classes_in_frame.append(cfg)
 
     # 2. Üst Kısımda Uyarı Mesajı Oluşturma (Eğer karede anomali varsa)
     if active_classes_in_frame:
-        # Ekranın üst kısmına siyah bir yarı şeffaf şerit veya doğrudan uyarı metni koyalım
-        # Çoklu çakışma durumunda (örn: Rock ve Wood aynı anda varsa) metinleri birleştirebiliriz
         alert_texts = [item["alert"] for item in active_classes_in_frame]
         combined_alert_text = " | ".join(alert_texts)
         
         # Üst uyarı bandı arkaplanı (Siyah kutu)
         cv2.rectangle(frame, (0, 0), (width, 60), (0, 0, 0), -1)
         
-        # Uyarı Yazısı (Kırmızı/Dikkat çekici renk)
+        # Uyarı Yazısı
         cv2.putText(frame, combined_alert_text, (20, 40), 
                     cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2, cv2.LINE_AA)
 
@@ -102,4 +107,8 @@ for f in range(start_frame, end_frame + 1):
 
 # Kaynakları serbest bırak
 video_writer.release()
-print(f"--- İşlem Tamamlandı! Video başarıyla kaydedildi: {output_video_path} ---")
+
+print("--- İşlem Tamamlandı! ---")
+print(f"Toplam {end_frame} kare tarandı.")
+print(f"İçinde anomali (etiket) bulunan toplam kare sayısı: {labeled_frame_count}")
+print(f"Video başarıyla kaydedildi: {output_video_path}")
