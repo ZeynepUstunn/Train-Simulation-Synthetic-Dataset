@@ -15,6 +15,7 @@ Sınıf 1 (Rock): Rayların üzerine düşmüş veya heyelan/çevresel etkenlerl
 Sınıf 2 (Wood): Demiryolu hattı üzerine devrilmiş veya bırakılmış ahşap kütük, tomruk ve tahta engel yapılarıdır.
 
 Sınıf 3 (Animal): Ray hattı çevresinde veya üzerinde yer alan canlı/hayvan maketlerini ve potansiyel canlı engellerini temsil eden sınıftır.
+
 ---
 
 ## 🚀 Script Açıklamaları ve Sürüm Geçmişi
