@@ -17,4 +17,4 @@ Other sınıfları: Yeşil (4-7)
 
 ## 📁 Veri Seti ve Demo Videoları
 Depolama alanı sınırlamaları nedeniyle, oluşturulan simülasyon kareleri (veri seti) ve sunum demo videoları Google Drive'da barındırılmaktadır.
-https://drive.google.com/drive/folders/1Y0jk6JRrMiW5uXnWxb6rRC12uxzRc9JB
+https://drive.google.com/drive/folders/1CC6Hnp6zTLd3s0wrShET7cYuHIL7p2mF
