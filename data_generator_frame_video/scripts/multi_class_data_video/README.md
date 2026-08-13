@@ -14,3 +14,7 @@ Renk Kodlama Mantığı (Görselleştirme İçin):
 Active sınıfları: Kırmızı (0-3)
 Edge sınıfları: Turuncu (8-11)
 Other sınıfları: Yeşil (4-7)
+
+## 📁 Veri Seti ve Demo Videoları
+Depolama alanı sınırlamaları nedeniyle, oluşturulan simülasyon kareleri (veri seti) ve sunum demo videoları Google Drive'da barındırılmaktadır.
+https://drive.google.com/drive/folders/1Y0jk6JRrMiW5uXnWxb6rRC12uxzRc9JB
