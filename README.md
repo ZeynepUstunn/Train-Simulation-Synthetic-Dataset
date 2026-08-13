@@ -19,11 +19,12 @@ Bu depo (repository), bilgisayar mühendisliği staj projem kapsamında gelişti
 * [**🗓️ HAFTA 3: Grafik İşlemci Sürücü Değişimi & Hız Senaryosu**]
   * NVIDIA Studio Sürücüsü mimarisine geçiş ile **10x render hızlanması** (6 dk'dan 42 sn'ye düşüş), 1260 karelik hız senaryosu tablosu ve katener telleri modellemesi.
 * [**🎯 HAFTA 4-5: Otonom Veri Üretim Pipeline'ı ve Sınıf Mimarisi**]
-  * **4 Sınıflı Mimariden 12 Sınıflı Detaylı Yapıya Geçiş:** Otonom rastgele yerleştirme denemelerinde yaşanan çakışma ve kot farkı sorunları aşılarak kontrollü/deterministik veri seti mimarisine geçildi. Nesnelerin konumlarına (aktif hat, kenar/hat dışı, diğer bölgeler) göre optimize edilmiş **12 Sınıflı YOLO Veri Seti** yapısı kuruldu:
-    * `0-3`: Active_Box, Active_Rock, Active_Wood, Active_Animal
-    * `4-7`: Other_Box, Other_Rock, Other_Wood, Other_Animal
-    * `8-11`: Edge_Box, Edge_Rock, Edge_Wood, Edge_Animal
-  * **Video Çeşitliliği ve Atmosfer Varyasyonları:** Ham veri üretiminden video çeşitliliğine odaklanılarak karlı zemin kaplamaları, kaya varyasyonları ve farklı skybox (gün batımı/gece) entegrasyonları test edildi.
+ * **Aşama 1 (4 Sınıflı Temel Pipeline):** Sürecin ilk etabında, nesne kategorileri daha sade tutularak (Box, Rock, Wood, Animal) temel otonom etiketleme ve video üretim pipeline'ı (`.png` görseller + YOLO `.txt` etiketleri + OpenCV doğrulama videoları) başarıyla kurgulandı ve ilk test veri seti üretildi.
+  * **Aşama 2 (12 Sınıflı Gelişmiş Mimarisi):** Modelin nesnelerin konumsal bağlamını (hat üstü, hat dışı vb.) daha iyi öğrenebilmesi amacıyla sınıf yapısı detaylandırılarak **12 Sınıflı YOLO Mimarisine** geçildi. Otonom rastgele yerleştirmedeki çakışma ve kot farkı sorunları kontrollü yaklaşımla aşılarak şu sınıf matrisi oluşturuldu:
+    * `0-3`: Active_Box, Active_Rock, Active_Wood, Active_Animal (Aktif hat bölgesi)
+    * `4-7`: Other_Box, Other_Rock, Other_Wood, Other_Animal (Diğer/uzaktaki bölge)
+    * `8-11`: Edge_Box, Edge_Rock, Edge_Wood, Edge_Animal (Kenar/hat dışı bölge)
+  * **Video Çeşitliliği ve Atmosfer Varyasyonları:** Ham veri üretiminden video çeşitliliğine odaklanılarak anomali varyasyonları ve farklı skybox (gün batımı/gece) entegrasyonları test edildi.
 * [**🎯 HAFTA 6: Otonom Veri Üretim Pipeline Optimizasyonu**]
   * **Algoritmik ve Performans Optimizasyonları:** Raycast yükünü azaltmak amacıyla tarama noktaları 9 noktadan **merkez ve 3 kritik köşeye** indirgendi. Frustum Culling ile birleştirilerek arkada kalan/görünmeyen nesnelerin etiketlenmesi engellendi ve render süresi optimize edildi. 
 * [**🚀 PROJENİN SON DURUMU VE ANALİZ RAPORU**]
