@@ -7,6 +7,14 @@
 
 Bu repo, Blender Python API (`bpy`) ve YOLO nesne tespiti formatı kullanılarak demiryolu sahneleri için otomatik sentetik veri (görsel ve `.txt` etiketleri) üreten Python betiklerini barındırmaktadır.
 
+## Sentetik Veri Üretiminde Kullanılan 4 Anomali Sınıfı (Classes)
+Sınıf 0 (Koli): Ray hattı üzerine yerleştirilmiş karton kargo kutusu veya bavul geometrilerini temsil eden, taşımacılık kaynaklı yabancı cisim senaryolarıdır.
+
+Sınıf 1 (Rock): Rayların üzerine düşmüş veya heyelan/çevresel etkenlerle hat soluna/sağına birikmiş doğal taş ve kaya parçalarıdır.
+
+Sınıf 2 (Wood): Demiryolu hattı üzerine devrilmiş veya bırakılmış ahşap kütük, tomruk ve tahta engel yapılarıdır.
+
+Sınıf 3 (Animal): Ray hattı çevresinde veya üzerinde yer alan canlı/hayvan maketlerini ve potansiyel canlı engellerini temsil eden sınıftır.
 ---
 
 ## 🚀 Script Açıklamaları ve Sürüm Geçmişi
