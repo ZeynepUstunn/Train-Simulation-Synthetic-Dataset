@@ -22,6 +22,6 @@ Bu depo (repository), bilgisayar mühendisliği staj projem kapsamında gelişti
   * Nihai render görselleri, istasyon ve katener sistemlerinin son hali, 42 saniyelik kesin zaman çizelgesi tablosu ve donanım benchmark çıktıları.
 
 ## 🎯 Gelecek Çalışmalar ve Veri Çeşitliliği (Data Augmentation)
-Yaygın yapay zeka modellerinin (AVIES, Bakanlık standartları, Saha Expo / IDEF vizyonu) sınırlarını ve dayanıklılığını test etmek amacıyla sonraki aşamalarda aynı kamera rotası sabit tutularak şu varyasyonların üretilmesi planlanmaktadır:
+Yaygın yapay zeka modellerinin sınırlarını ve dayanıklılığını test etmek amacıyla sonraki aşamalarda aynı kamera rotası sabit tutularak şu varyasyonların üretilmesi planlanmaktadır:
 * [ ] **Zorlu Hava Şartları:** Şiddetli yağmur parçacıkları, karlı zemin kaplamaları ve yoğun sis (Mist Pass) simülasyonu.
 * [ ] **Işık Kaynağı Değişimleri:** Gece / Alacakaranlık seyrinde tren far ışığının nesne tespiti üzerindeki etkisinin test edilmesi.
