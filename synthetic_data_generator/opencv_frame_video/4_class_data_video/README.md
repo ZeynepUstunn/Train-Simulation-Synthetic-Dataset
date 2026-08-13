@@ -16,3 +16,7 @@ dataset2_video (Görseldeki dataset2_video klasörü)
 dataset3_video (Görseldeki dataset3_video klasörü)
 İçerik: Toplam 1.080 frame içeren, sahneye özel 3 parçalı segment yapısıyla üretilmiş veri seti ve 3 parça halinde video kayıtları.
 Özellik: Segment bazlı hedef sınırlamaları ve yaşam döngüsü kuralları (kare aralığına göre aktifleşip çıkan nesneler) test edilerek optimize edilmiş kararlı üretim seti.
+
+## 📁 Veri Seti ve Demo Videoları
+Depolama alanı sınırlamaları nedeniyle, oluşturulan simülasyon kareleri (veri seti) ve sunum demo videoları Google Drive'da barındırılmaktadır.
+https://drive.google.com/drive/folders/1Y0jk6JRrMiW5uXnWxb6rRC12uxzRc9JB
