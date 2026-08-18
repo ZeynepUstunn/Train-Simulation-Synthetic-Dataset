@@ -69,6 +69,7 @@ def is_object_visible_by_raycast(scene, camera, target_mesh):
             hits += 1
             
     return hits >= 1
+# bu 5 noktadan en az 1 tanesi kameraya ulaşabildiyse (yani araya başka bir engel girmediyse, başka bir nesnenin arkasında tamamen saklanmadıysa) nesne "görünür" kabul edilir.
 
 def get_bounding_box_2d(scene, camera, obj):
     target_mesh = find_mesh_recursive(obj)
